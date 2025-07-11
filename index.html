@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Priya | Data Analyst Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(120deg, #fef6ff, #f3faff);
+      color: #333;
+    }
+    nav {
+      background-color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    nav a {
+      text-decoration: none;
+      margin: 0 1rem;
+      color: #6c63ff;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #333;
+    }
+    section {
+      padding: 4rem 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    h1, h2, h3 {
+      color: #2d2d2d;
+    }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .project-card {
+      background-color: #ffffffdd;
+      padding: 1.5rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s;
+    }
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+    .resume-btn {
+      padding: 0.75rem 1.5rem;
+      background: linear-gradient(135deg, #6c63ff, #947eff);
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+      display: inline-block;
+      margin-top: 1rem;
+    }
+    .resume-btn:hover {
+      background: linear-gradient(135deg, #5b56d6, #786af1);
+    }
+    .contact-icons a {
+      margin-right: 1rem;
+      text-decoration: none;
+      color: #6c63ff;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    .contact-icons a:hover {
+      color: #333;
+    }
+    ul li {
+      margin-bottom: 0.5rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #f9f9f9;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div><strong>Priya</strong></div>
+    <div>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#resume">Resume</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <section id="home">
+    <h1>Hi, I'm Priya</h1>
+    <p>Aspiring Data Analyst | Python | SQL | Power BI</p>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m a final-year Computer Science student passionate about data-driven decisions. I've built projects in Python involving EDA, visualizations, and dashboard reporting. I'm actively seeking data analytics internship opportunities.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>Python</li>
+      <li>SQL</li>
+      <li>Power BI</li>
+      <li>Pandas</li>
+      <li>NumPy</li>
+      <li>Seaborn</li>
+      <li>Excel</li>
+      <li>Git</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>Zomato EDA</h3>
+        <p>Performed exploratory data analysis on Zomato dataset using Python and visualized user preferences and cuisine trends.</p>
+        <a href="https://github.com/yourusername/zomato-eda" target="_blank">View on GitHub</a>
+      </div>
+      <div class="project-card">
+        <h3>Sales Dashboard</h3>
+        <p>Built a Power BI dashboard for sales insights including KPIs, region-wise sales, and time trends.</p>
+        <a href="https://github.com/yourusername/sales-dashboard" target="_blank">View on GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="resume">
+    <h2>Resume</h2>
+    <a href="https://drive.google.com/your-resume-link" class="resume-btn" target="_blank">Download Resume</a>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <div class="contact-icons">
+      <a href="https://linkedin.com/in/your-linkedin" target="_blank">LinkedIn</a>
+      <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+      <a href="mailto:your.email@example.com">Email</a>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Priya | Built with 💜 using HTML & CSS
+  </footer>
+</body>
+</html>
