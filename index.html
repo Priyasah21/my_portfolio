@@ -1,98 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Priya | Data Analyst Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
   <style>
     * {
       box-sizing: border-box;
       scroll-behavior: smooth;
     }
+
     body {
       margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(120deg, #fef6ff, #f3faff);
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(-45deg, #e0eafc, #cfdef3, #e0eafc, #d4fc79);
+      background-size: 400% 400%;
+      animation: gradientBG 10s ease infinite;
       color: #333;
     }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
     nav {
-      background-color: #fff;
+      background-color: rgba(255, 255, 255, 0.9);
       padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      backdrop-filter: blur(10px);
     }
+
     nav a {
       text-decoration: none;
       margin: 0 1rem;
       color: #6c63ff;
       font-weight: 600;
-      transition: color 0.3s;
+      transition: all 0.3s ease-in-out;
     }
+
     nav a:hover {
-      color: #333;
+      color: #2c2c2c;
     }
+
     section {
-      padding: 4rem 2rem;
-      max-width: 900px;
+      padding: 5rem 2rem;
+      max-width: 960px;
       margin: auto;
     }
+
     h1, h2, h3 {
       color: #2d2d2d;
     }
+
+    #home {
+      text-align: center;
+    }
+
+    #home h1 {
+      font-size: 3rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      color: #6c63ff;
+      animation: floatText 3s ease-in-out infinite;
+    }
+
+    @keyframes floatText {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-5px); }
+    }
+
+    #home p {
+      font-size: 1.2rem;
+      color: #444;
+    }
+
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1.5rem;
     }
+
     .project-card {
-      background-color: #ffffffdd;
+      background: rgba(255, 255, 255, 0.7);
       padding: 1.5rem;
       border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      transition: transform 0.3s ease, box-shadow 0.3s;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      backdrop-filter: blur(8px);
     }
+
     .project-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
     }
+
     .resume-btn {
-      padding: 0.75rem 1.5rem;
-      background: linear-gradient(135deg, #6c63ff, #947eff);
+      padding: 0.8rem 1.6rem;
+      background: #6c63ff;
       color: white;
       text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
+      border-radius: 10px;
+      font-weight: 600;
       transition: background 0.3s ease;
       display: inline-block;
       margin-top: 1rem;
     }
+
     .resume-btn:hover {
-      background: linear-gradient(135deg, #5b56d6, #786af1);
+      background: #554ee3;
     }
+
     .contact-icons a {
-      margin-right: 1rem;
+      margin-right: 1.2rem;
       text-decoration: none;
       color: #6c63ff;
-      font-weight: bold;
+      font-weight: 600;
       transition: color 0.3s;
     }
+
     .contact-icons a:hover {
-      color: #333;
+      color: #2b2b2b;
     }
+
     ul li {
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.4rem;
     }
+
     footer {
       text-align: center;
       padding: 2rem;
-      background: #f9f9f9;
+      background: rgba(255, 255, 255, 0.5);
       font-size: 0.9rem;
       color: #777;
+      backdrop-filter: blur(5px);
     }
   </style>
 </head>
@@ -116,7 +163,7 @@
 
   <section id="about">
     <h2>About Me</h2>
-    <p>I’m a final-year Computer Science student passionate about data-driven decisions. I've built projects in Python involving EDA, visualizations, and dashboard reporting. I'm actively seeking data analytics internship opportunities.</p>
+    <p>I’m a final-year Computer Science student passionate about data-driven decisions. I enjoy exploring real-world datasets, building insightful dashboards, and discovering meaningful patterns in data. I'm constantly upskilling in Python, SQL, Power BI, and Excel to become a valuable data professional.</p>
   </section>
 
   <section id="skills">
@@ -138,28 +185,28 @@
     <div class="projects-grid">
       <div class="project-card">
         <h3>Zomato EDA</h3>
-        <p>Performed exploratory data analysis on Zomato dataset using Python and visualized user preferences and cuisine trends.</p>
-        <a href="https://github.com/yourusername/zomato-eda" target="_blank">View on GitHub</a>
+        <p>Performed exploratory data analysis on Zomato dataset using Python. Visualized user preferences and trends to identify best cuisines and city patterns.</p>
+        <a href="https://github.com/Priyasah21/zomato-eda" target="_blank">View on GitHub</a>
       </div>
       <div class="project-card">
         <h3>Sales Dashboard</h3>
-        <p>Built a Power BI dashboard for sales insights including KPIs, region-wise sales, and time trends.</p>
-        <a href="https://github.com/yourusername/sales-dashboard" target="_blank">View on GitHub</a>
+        <p>Built a dynamic Power BI dashboard showing KPIs, region-wise sales performance, product segments, and customer insights.</p>
+        <a href="https://github.com/Priyasah21/sales-dashboard" target="_blank">View on GitHub</a>
       </div>
     </div>
   </section>
 
   <section id="resume">
     <h2>Resume</h2>
-    <a href="https://drive.google.com/your-resume-link" class="resume-btn" target="_blank">Download Resume</a>
+    <a href="https://drive.google.com/file/d/your-resume-link/view" class="resume-btn" target="_blank">Download Resume</a>
   </section>
 
   <section id="contact">
     <h2>Contact Me</h2>
     <div class="contact-icons">
-      <a href="https://linkedin.com/in/your-linkedin" target="_blank">LinkedIn</a>
-      <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-      <a href="mailto:your.email@example.com">Email</a>
+      <a href="https://linkedin.com/in/priyasah21" target="_blank">LinkedIn</a>
+      <a href="https://github.com/Priyasah21" target="_blank">GitHub</a>
+      <a href="mailto:priyasahofficial@gmail.com">Email</a>
     </div>
   </section>
 
